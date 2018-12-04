@@ -14,9 +14,9 @@ class Artwork extends Component {
       <div>
         <li>
         <span>{this.props.artwork.text}</span><button onClick={() => this.handleOnClick()}>DELETE</button>
-        <CommentInput 
+          <CommentInput 
             store={this.props.store}
-            artworkId={this.props.artwork.id} />
+            artworkId={this.props.artwork.id} /> 
         </li>
       </div>
     );

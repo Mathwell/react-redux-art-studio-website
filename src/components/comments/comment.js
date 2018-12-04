@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-class Review extends Component {
+class Comment extends Component {
 
   handleOnClick() {
     this.props.store.dispatch({

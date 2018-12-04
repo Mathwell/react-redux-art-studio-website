@@ -41,4 +41,4 @@ class ArtworkInput extends Component {
   }
 };
 
-export default RestaurantInput;
+export default ArtworkInput;

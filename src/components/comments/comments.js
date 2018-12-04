@@ -3,11 +3,11 @@ import Comment from './comment';
 
 class Comments extends Component {
   render() {
-    const { store, commentId } = this.props;
+    const { store, artworkId } = this.props;
     const comments = store.getState().comments.filter(comment => comment.artworkId === artworkId).map((comment, index) => {
       return <Comment store={store} key={index} comment={comment} />
     });
-    
+    //debugger
     return (
       <ul>
         {comments}
@@ -16,4 +16,4 @@ class Comments extends Component {
   }
 };
 
-export default Reviews;
+export default Comments;
