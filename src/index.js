@@ -10,7 +10,10 @@ const store = createStore(manageArtwork);
 
 function render() {
     ReactDOM.render(
-      <App store={store} />,
+        <Router>
+       
+      <App store={store} />
+      </Router>,
       document.getElementById('root')
     );
   };
