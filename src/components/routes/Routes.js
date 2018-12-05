@@ -5,6 +5,7 @@ import About from "./About";
 import Login from "./Login";
 import ThemeSwitcher from "./ThemeSwitcher";
 import Form from "./Gallery";
+import Upload from "./Upload";
 
 export default () =>
   <Switch>    
@@ -14,5 +15,6 @@ export default () =>
          <Route exact path="/login" component={Login} />
          <Route exact path="/theme" component={ThemeSwitcher} />
          <Route exact path="/enter" component={Form} />
+         <Route exact path="/upload" component={Upload}/>
     </React.Fragment>
   </Switch>;

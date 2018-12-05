@@ -28,18 +28,21 @@ class App extends Component {
                <Link to="/login">Login</Link>
             </NavItem>            
             <NavItem >
-               <Link to="/theme">Login</Link>
+               <Link to="/theme">Theme</Link>
             </NavItem>                        
             <NavItem >
                <Link to="/enter">Enter</Link>
+            </NavItem>        
+            <NavItem >
+               <Link to="/upload">Upload</Link>
             </NavItem>                        
           </Nav>
         </Navbar.Collapse>
       </Navbar>
       <Routes />
        
-         <ArtworkInput store={this.props.store} />
-         <Artworks store={this.props.store}/> 
+         {/* <ArtworkInput store={this.props.store} />
+         <Artworks store={this.props.store}/>  */}
       </div>
     );
   }

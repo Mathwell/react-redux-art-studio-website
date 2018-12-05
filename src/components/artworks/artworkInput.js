@@ -12,7 +12,7 @@ class ArtworkInput extends Component {
 
   handleOnChange(event){
     this.setState({
-      text: event.target.value
+      [event.target.name]: event.target.value
     });
   }
 
@@ -22,6 +22,7 @@ class ArtworkInput extends Component {
       type: 'ADD_ARTWORK',
       artwork: {
         text: this.state.text,
+        link: this.state.link
       },
     });
     this.setState({
@@ -33,7 +34,8 @@ class ArtworkInput extends Component {
     return (
       <div>
         <form onSubmit={(event) => this.handleOnSubmit(event)}>
-          <input type="text" onChange={(event) => this.handleOnChange(event)}  value={this.state.text}/>
+          <input type="text" name="text" onChange={(event) => this.handleOnChange(event)}  value={this.state.text}/>
+          <input type="text" name="link" onChange={(event) => this.handleOnChange(event)}  value={this.state.link}/>
           <input type="submit" />
         </form>
       </div>
