@@ -10,8 +10,8 @@ export default () =>
   <Switch>    
     <React.Fragment>         
          <Route exact path="/" component={Home} />
-         <Route exact path="/about" render={About} />
-         <Route exact path="/login" render={Login} />
+         <Route exact path="/about" component={About} />
+         <Route exact path="/login" component={Login} />
          <Route exact path="/theme" component={ThemeSwitcher} />
          <Route exact path="/enter" component={Form} />
     </React.Fragment>
