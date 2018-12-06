@@ -6,6 +6,8 @@ import Login from "./Login";
 import ThemeSwitcher from "./ThemeSwitcher";
 import Form from "./Gallery";
 import Upload from "./Upload";
+//import AnotherGallery from "./AnotherGallery"
+import Comments from "./Comments"
 
 export default () =>
   <Switch>    
@@ -14,7 +16,8 @@ export default () =>
          <Route exact path="/about" component={About} />
          <Route exact path="/login" component={Login} />
          <Route exact path="/theme" component={ThemeSwitcher} />
-         <Route exact path="/enter" component={Form} />
+         <Route exact path="/gallery" component={Form} />
          <Route exact path="/upload" component={Upload}/>
+         <Route exact path="/comments" component={Comments}/>
     </React.Fragment>
   </Switch>;

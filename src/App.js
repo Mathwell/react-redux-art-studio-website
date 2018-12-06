@@ -1,11 +1,11 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
-import ArtworkInput from './components/artworks/artworkInput'
-import Artworks from './components/artworks/artworks'
+//import logo from './logo.svg';
+//import ArtworkInput from './components/artworks/artworkInput'
+//import Artworks from './components/artworks/artworks'
 import './App.css';
 import { Link } from "react-router-dom";
 import { Nav, Navbar, NavItem } from "react-bootstrap";
-import { LinkContainer } from "react-router-bootstrap";
+//import { LinkContainer } from "react-router-bootstrap";
 import Routes from './components/routes/Routes';
 
 class App extends Component {
@@ -31,7 +31,7 @@ class App extends Component {
                <Link to="/theme">Theme</Link>
             </NavItem>                        
             <NavItem >
-               <Link to="/enter">Enter</Link>
+               <Link to="/gallery">Gallery</Link>
             </NavItem>        
             <NavItem >
                <Link to="/upload">Upload</Link>

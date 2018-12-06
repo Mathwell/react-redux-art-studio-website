@@ -1,10 +1,14 @@
 import React from 'react'
 //import { ENODATA } from 'constants';
 import {Thumbnail, Button} from 'react-bootstrap'
+import { Link } from "react-router-dom";
 
 
 class GalleryImage extends React.Component{
     
+    handleClick(event){
+
+    }
 
     render(){
         return(
@@ -12,9 +16,11 @@ class GalleryImage extends React.Component{
               <h3>{this.props.img.text}</h3>
               <p>Description</p>
               <p>
-                  <Button bsStyle="primary" href={this.props.img.link}>Button</Button>
+                  <Button bsStyle="primary" href={this.props.img.zoom_link}>Enlarge</Button>
                   &nbsp;
-                  <Button bsStyle="default">Button</Button>
+                  <Button bsStyle="default" id={this.props.id} href="/comments">
+                   <Link to='/comments'> Comments </Link>
+                  </Button> 
               </p>
           </Thumbnail>
       

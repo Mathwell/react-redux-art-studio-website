@@ -12,33 +12,25 @@ class GalleryImages extends React.Component{
         const galleryImages = this.props.imgs.map((img, index) => {
             return (
             <Col xs={6} md={4}>
-            <GalleryImage key={index} img={img} />
+                 <GalleryImage key={index} img={img} />
             </Col>)
-
           });
-        debugger
+        //debugger
         return(
-   <Grid>
-     <Row>
-{/* //       <Col xs={6} md={4}>
-//           <GalleryImage img={this.props.imgs[i]} />          
-//       </Col>
-//       <Col xs={6} md={4}>
-//         <GalleryImage img={this.props.imgs[i+1]} /> 
-//        </Col>
-//       <Col xs={6} md={4}>
-//         <GalleryImage img={this.props.imgs[i+2]} /> 
-//     </Col> */}
-    {galleryImages}
-    </Row>
- </Grid>
+            <div className=".thumbnail">
+             <Grid>
+                <Row>
+                {galleryImages}
+                </Row>
+             </Grid>
+             </div>
 
 )    
 
 }}
 
 GalleryImages.defaultProps={
-    imgs: [{link: "", text: "1"}, {}, {}]
+    imgs: [{link: "", text: ""}, {}, {}]
 }
 
 export default GalleryImages
