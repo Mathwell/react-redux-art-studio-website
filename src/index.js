@@ -6,29 +6,27 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
-import createStore from './createStore';
+//import createStore from './createStore';
 import manageArtwork from './reducers/manageArtwork';
 import { BrowserRouter as Router} from 'react-router-dom';
+import { createStore } from 'redux';
+//import thunk from 'redux-thunk';
+import { Provider } from 'react-redux'; 
 
 const store = createStore(manageArtwork);
 
-function render() {
-    ReactDOM.render(
+    ReactDOM.render(      
+       <Provider store={store}>
         <Router>
-       
-      <App store={store} />
-      </Router>,
+          
+            <App/>
+          
+        </Router>
+        </Provider>
+        ,
       document.getElementById('root')
     );
-  };
-  
-  export const renderer = { render: render };
   
   store.dispatch({ type: '@@init' });
 
-//ReactDOM.render(<App />, document.getElementById('root'));
-
-// If you want your app to work offline and load faster, you can change
-// unregister() to register() below. Note this comes with some pitfalls.
-// Learn more about service workers: http://bit.ly/CRA-PWA
 serviceWorker.unregister();

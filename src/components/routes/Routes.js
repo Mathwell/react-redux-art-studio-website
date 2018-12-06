@@ -6,7 +6,6 @@ import Login from "./Login";
 import ThemeSwitcher from "./ThemeSwitcher";
 import Form from "./Gallery";
 import Upload from "./Upload";
-//import AnotherGallery from "./AnotherGallery"
 import Comments from "./Comments"
 
 export default () =>

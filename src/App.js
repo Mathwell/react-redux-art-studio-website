@@ -4,9 +4,10 @@ import React, { Component } from 'react';
 //import Artworks from './components/artworks/artworks'
 import './App.css';
 import { Link } from "react-router-dom";
-import { Nav, Navbar, NavItem } from "react-bootstrap";
+import { Nav, Navbar, NavItem, FormGroup, FormControl, Button } from "react-bootstrap";
 //import { LinkContainer } from "react-router-bootstrap";
 import Routes from './components/routes/Routes';
+import { connect } from 'react-redux';
 
 class App extends Component {
   render() {
@@ -18,8 +19,14 @@ class App extends Component {
               <Link to="/">Home</Link>
              </Navbar.Brand>
              <Navbar.Toggle />
-            </Navbar.Header>
+            </Navbar.Header>            
         <Navbar.Collapse>
+        <Navbar.Form pullLeft>
+      <FormGroup>
+        <FormControl type="text" placeholder="Search" />
+      </FormGroup>{' '}
+      <Button type="submit">Submit</Button>
+        </Navbar.Form>
           <Nav pullRight>             
             <NavItem >
                <Link to="/about">About</Link>
@@ -48,4 +55,13 @@ class App extends Component {
   }
 }
 
+// const mapStateToProps = state => {
+//   return {
+//       artworks: state.artworks,
+//       comments: state.comments
+//   };
+// };
+
+
+// export default connect(  mapStateToProps)(App);
 export default App;

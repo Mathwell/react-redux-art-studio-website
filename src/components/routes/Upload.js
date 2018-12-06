@@ -1,5 +1,5 @@
 import React from 'react'
-import {Form, FormControl, FormGroup, HelpBlock, Checkbox, ControlLabel, Radio, Button} from 'react-bootstrap'
+//import {Form, FormControl, FormGroup, HelpBlock, Checkbox, ControlLabel, Radio, Button} from 'react-bootstrap'
 import FieldGroup from './FieldGroup'
 
 class Upload extends React.Component {

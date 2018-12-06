@@ -14,9 +14,13 @@ export default function manageArtworks(state = {
         return Object.assign({}, state, { 
             artworks: state.artworks.concat(artwork),
         });
+        case 'ADD_ARTWORKS':
+        const artworks = action.artworks;
+        return Object.assign({}, state, { artworks});
+
         case 'DELETE_ARTWORK':
-            const artworks = state.artworks.filter(artwork => artwork.id !== action.id);
-            return Object.assign({}, state, { artworks });
+            const artworksFiltered = state.artworks.filter(artwork => artwork.id !== action.id);
+            return Object.assign({}, state, { artworksFiltered });
 
         case 'ADD_COMMENT':            
             const comment = Object.assign({}, action.comment, { id: cuidFn() });
