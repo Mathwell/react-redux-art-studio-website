@@ -1,16 +1,17 @@
 import React, { Component } from 'react';
 import './App.css';
 import { Link } from "react-router-dom";
-import { Nav, Navbar, NavItem, FormGroup, FormControl, Button, Grid, Row, Thumbnail} from "react-bootstrap";
+import { Image,Nav, Navbar, NavItem, FormGroup, FormControl, Button, Grid, Row, Thumbnail} from "react-bootstrap";
 import Routes from './components/routes/Routes';
 import { connect } from 'react-redux';
+import logo from './images/logo.jpg'
 
 class App extends Component {
   render() {
     var icon = (
       <span class="logo">
         <a href="/">
-          <img src="images/logo.jpg" height="33" width="120" alt="text here" /></a>
+          <img src={logo} height="33" width="33" alt="logo" /></a>
       </span>
     );
     return (
@@ -20,11 +21,11 @@ class App extends Component {
         <Navbar fluid collapseOnSelect>
             <Navbar.Header>
              <Navbar.Brand>
-              {/* <Thumbnail href="#" alt="171x180" src="/images/logo.jpg" />
-              <Link to="/">Home</Link> */}
-              <a href="#">&#9776; 
-               <img src="images/logo.jpg" style={{width:100, marginTop: -7}} />
-              </a>
+             {/* <Link to="/">
+             <Image src={logo} circle />
+             </Link>  */}
+              
+              {icon} 
              </Navbar.Brand>
              <Navbar.Toggle />
             </Navbar.Header>            
