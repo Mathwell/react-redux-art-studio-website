@@ -9,24 +9,26 @@ import * as serviceWorker from './serviceWorker';
 //import createStore from './createStore';
 import manageArtwork from './reducers/manageArtwork';
 import { BrowserRouter as Router} from 'react-router-dom';
-import { createStore } from 'redux';
-//import thunk from 'redux-thunk';
+import { createStore, applyMiddleware } from 'redux';
+import thunk from 'redux-thunk';
 import { Provider } from 'react-redux'; 
+import { fetchImages } from './components/actions/fetchImages'
 
-const store = createStore(manageArtwork);
+const store = createStore(manageArtwork, applyMiddleware(thunk));
 
     ReactDOM.render(      
        <Provider store={store}>
         <Router>
-          
-            <App/>
-          
+            <App/>          
         </Router>
         </Provider>
         ,
       document.getElementById('root')
     );
   
+
   store.dispatch({ type: '@@init' });
+  store.dispatch(fetchImages())
+  
 
 serviceWorker.unregister();

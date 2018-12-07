@@ -1,9 +1,10 @@
 import React from 'react'
 //import { ENODATA } from 'constants';
-import {Form, FormGroup, FormControl, ControlLabel, Button} from 'react-bootstrap'
+import {Form, FormGroup, FormControl, ControlLabel, Button, Jumbotron, Col, Grid, Row} from 'react-bootstrap'
 import GalleryImages from '../images/GalleryImages'
 import { fetchImages } from '../actions/fetchImages'
 import { connect } from 'react-redux';
+import FieldGroup from './FieldGroup'
 
 
 class Gallery extends React.Component {
@@ -49,17 +50,37 @@ class Gallery extends React.Component {
         // </form>
         //{this.fetchIMGs()}
         <div>
+          <Grid>
+            <Row>
+              <Col xs={6} md={6}>
+        
         <Form inline>
           <FormGroup controlId="formInlineName">
             <ControlLabel>Name</ControlLabel>{' '}
           <FormControl type="text" placeholder="Alex" />
           </FormGroup>{' '}
   
+
           <Button type="submit" onClick={this.handleClick}>Search by Name</Button>
         </Form>;
+        
+        </Col>
+        <Col xs={6} md={6}>
+        <FieldGroup
+        id="formControlsFile"
+        type="file"
+        label="File"
+        help="Example block-level help text here."
+      />
+      </Col>
+      </Row>
+      </Grid>
+
         {/* <button onClick={this.handleClick}>Click to Fetch!</button>         */}
          {/* <GalleryImages imgs={this.state.imgs}/>   */}
-        <GalleryImages imgs={this.props.artworks}/> 
+         <Jumbotron>
+            <GalleryImages imgs={this.props.artworks}/> 
+          </Jumbotron>
         </div>
       )
     }
@@ -75,13 +96,13 @@ class Gallery extends React.Component {
         //       //console.log(this.state)                       
         //   }).catch(err=>console.log(err))  
           //debugger        
-          debugger
+         // debugger
       }
 
      
 
       componentDidMount(){
-        this.fetchIMGs()
+        //this.fetchIMGs()
         //this.displayIMGs()        
       }
       

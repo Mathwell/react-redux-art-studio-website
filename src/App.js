@@ -1,22 +1,30 @@
 import React, { Component } from 'react';
-//import logo from './logo.svg';
-//import ArtworkInput from './components/artworks/artworkInput'
-//import Artworks from './components/artworks/artworks'
 import './App.css';
 import { Link } from "react-router-dom";
-import { Nav, Navbar, NavItem, FormGroup, FormControl, Button } from "react-bootstrap";
-//import { LinkContainer } from "react-router-bootstrap";
+import { Nav, Navbar, NavItem, FormGroup, FormControl, Button, Grid, Row, Thumbnail} from "react-bootstrap";
 import Routes from './components/routes/Routes';
 import { connect } from 'react-redux';
 
 class App extends Component {
   render() {
+    var icon = (
+      <span class="logo">
+        <a href="/">
+          <img src="images/logo.jpg" height="33" width="120" alt="text here" /></a>
+      </span>
+    );
     return (
-      <div className="App_container">
+      <div className="app_container">      
+      <Grid className="container_main">
+        <Row>
         <Navbar fluid collapseOnSelect>
             <Navbar.Header>
              <Navbar.Brand>
-              <Link to="/">Home</Link>
+              {/* <Thumbnail href="#" alt="171x180" src="/images/logo.jpg" />
+              <Link to="/">Home</Link> */}
+              <a href="#">&#9776; 
+               <img src="images/logo.jpg" style={{width:100, marginTop: -7}} />
+              </a>
              </Navbar.Brand>
              <Navbar.Toggle />
             </Navbar.Header>            
@@ -47,7 +55,10 @@ class App extends Component {
         </Navbar.Collapse>
       </Navbar>
       <Routes />
-       
+      </Row>
+      <Row className="image_container">
+      </Row>
+      </Grid> 
          {/* <ArtworkInput store={this.props.store} />
          <Artworks store={this.props.store}/>  */}
       </div>
@@ -55,13 +66,4 @@ class App extends Component {
   }
 }
 
-// const mapStateToProps = state => {
-//   return {
-//       artworks: state.artworks,
-//       comments: state.comments
-//   };
-// };
-
-
-// export default connect(  mapStateToProps)(App);
 export default App;

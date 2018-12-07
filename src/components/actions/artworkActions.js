@@ -19,3 +19,10 @@ export const DeleteArtWork = id =>{
     }
 
 }
+
+export const FetchArtworks = (artworks) =>{
+    return {
+        type: 'FETCH_IMAGES',
+        artworks: artworks
+    }
+}
